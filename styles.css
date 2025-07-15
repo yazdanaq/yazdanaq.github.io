@@ -567,3 +567,36 @@ a {
     border: none;
     margin-bottom: 10px;
 }
+
+.contact-inline {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between email and icons */
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+.contact-email a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-email img.icon-inline {
+    width: 20px;
+    height: 20px;
+}
+
+.contact-social {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.contact-social img {
+    width: 30px;
+    height: 30px;
+}
