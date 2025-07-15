@@ -453,6 +453,11 @@ a {
     flex-wrap: wrap;
     justify-content: flex-start;
 }
+
+.contact-inline {
+    flex-direction: column;
+    align-items: flex-start;
+}
 }
 
 .tabs-inline-header {
@@ -571,7 +576,7 @@ a {
 .contact-inline {
     display: flex;
     align-items: center;
-    gap: 30px; /* Space between email and icons */
+    gap: 30px; 
     flex-wrap: wrap;
     padding: 10px 0;
 }
@@ -586,8 +591,8 @@ a {
 }
 
 .contact-email img.icon-inline {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
 
 .contact-social {
