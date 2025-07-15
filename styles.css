@@ -522,9 +522,15 @@ a {
 
 .contact-social {
     display: flex;
-    gap: 15px;
+    flex-direction: row;
+    flex-wrap: nowrap; /* Force single line */
     align-items: center;
-    margin-top: 10px;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.contact-social a {
+    display: inline-block;
 }
 
 .contact-social img {
