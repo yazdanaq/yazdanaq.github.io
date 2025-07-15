@@ -559,3 +559,21 @@ a {
 .contact-card .update-item.no-border .update-item-description {
     margin-bottom: 20px;
 }
+
+/* Contact card background and border removal */
+.contact-card .section-title {
+    background-color: transparent;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.contact-card .updates {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 10px 0;
+}
+
+.contact-card .update-item {
+    border: none;
+    margin-bottom: 10px;
+}
