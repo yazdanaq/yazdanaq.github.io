@@ -449,6 +449,10 @@ a {
         margin: 0 10px;
     }
 
+    .contact-social {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
 }
 
 .tabs-inline-header {
