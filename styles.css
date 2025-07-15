@@ -92,12 +92,15 @@ a {
 }
 
 .social-links {
+    width: 50%;
+    margin: 20px auto; /* Center the container horizontally */
     display: flex;
+    justify-content: space-around; /* Even spacing between items */
     align-items: center;
-    gap: 12px;
     flex-wrap: wrap;
-    margin-top: 10px;
+    gap: 12px;
 }
+
 
 .social-links img {
     width: 30px;
