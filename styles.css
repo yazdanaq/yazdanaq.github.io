@@ -541,3 +541,17 @@ a {
     width: 30px;
     height: 30px;
 }
+
+/* Align email icon inline */
+.icon-inline {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+/* Remove border from specific update item */
+.update-item.no-border {
+    border-bottom: none;
+    margin-bottom: 0;
+}
