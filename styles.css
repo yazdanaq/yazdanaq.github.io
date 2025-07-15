@@ -495,3 +495,39 @@ a {
     display: block;
 }
 
+.contact-card .section-title {
+    position: relative;
+    left: 30px;
+    background-color: #ffe5ec;
+    font-weight: 800;
+    font-size: 2rem;
+    padding: 7px 10px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
+}
+
+.contact-card .updates {
+    background-color: #ffe5ec;
+    border-radius: 8px;
+    max-height: fit-content;
+    padding: 10px 20px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.contact-card .update-item {
+    border-bottom: 2px solid #8686867b;
+    margin-bottom: 5px;
+}
+
+.contact-social {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.contact-social img {
+    width: 30px;
+    height: 30px;
+}
