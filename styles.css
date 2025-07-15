@@ -556,6 +556,6 @@ a {
     margin-bottom: 0;
 }
 
-.contact-card .update-item.no-border {
-    margin-bottom: 20px; /* You can increase this value for more space */
+.contact-card .update-item.no-border .update-item-description {
+    margin-bottom: 20px;
 }
