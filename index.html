@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yazdan Ahmad Qadri</title>
@@ -15,22 +15,28 @@
 
 <body>
     <main class="main-content">
-        <div class="headers">
+        <div class="headers frosted-glass section">
             <div class="descriptions">
                 <h1>Yazdan Ahmad Qadri</h1>
                 <h2> Research Professor</h2>
                 <p>
                    I am an International Research Professor at the <span class="highlighter">School of Computer Science and Engineering, Yeungnam University, Republic of Korea.</span>
                    My reseach focuses on converging wireless communication, artificial intelligence, and medicine to create a <span class="highlighter">hyperconnected healthcare system.</span>
-                   <br> 
+                </p>
+                <p>
                    My work combines <span class="highlighter"> latency Wi-Fi communication </span> with <span class="highlighter"> deep learning-based biomedical signal processing </span>to improve the people's quality-of-life.    
                 </p>
             </div>
+
+                <div class="profile">
+        <img src="./assets/images/me.gif" alt="Profile photo">
+            </div>
+
         </div>
     
     <!-- Contact Card Section -->
-    <div class="contact-card">
-    <!-- <div class="section-title">Contact</div> -->
+    <div class="contact-card frosted-glass section">
+    <div class="section-title">Connect</div>
     <div class="updates contact-inline">
         <div class="contact-email">
             <a href="mailto:yazdan.qadri@yu.ac.kr">
@@ -53,13 +59,13 @@
 </div>
     
     <!-- News Section -->
-    <div class="announcements">
+    <div class="announcements frosted-glass  section">
         <div class="section-title">News</div>
         <div id="announcement-board" class="updates"></div>
     </div>
 
         <!-- Education & Experience Section -->
-    <div class="education-experience">
+    <div class="education-experience frosted-glass  section">
         <div class="section-title">Research Education & Experience</div>
         <div class="updates">
             <div class="update-item">
@@ -78,7 +84,7 @@
     </div>
 
     <!-- Awards & Honors Section -->
-    <div class="awards-honors">
+    <div class="awards-honors frosted-glass section">
         <div class="section-title">Awards and Honors</div>
         <div class="updates">
             <div class="update-item">
@@ -93,7 +99,7 @@
     </div>
     
 
-    <div class="publications">
+    <div class="publications frosted-glass section">
         <div class="tabs-inline-header">
             <button class="tab-button active" data-tab="publication">Publications</button>
             <button class="tab-button" data-tab="presentation">Conferences</button>
@@ -108,6 +114,10 @@
     </div>
         
         </div>
+
+    <footer class="site-footer">
+    Last updated: <span id="last-updated"></span>
+</footer>
     </main>
     <script type="text/javascript" src="./index.js"></script>
 </body>

@@ -8,9 +8,9 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Raleway', 'Roboto', -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.5;
     color: #333;
 }
@@ -21,7 +21,7 @@ a {
 }
 
 .highlighter {
-    background-color: #ffedd8;
+    background-color: #afe0fa;
 }
 
 .main-content {
@@ -30,6 +30,7 @@ a {
     transform: translateX(-50%);
     width: 60vw;
     margin: 30px 0;
+    padding-bottom: 60px;
 }
 
 .headers {
@@ -71,8 +72,13 @@ a {
     width: 100%;
     position: relative;
     top: -30px;
-    background-color: #ffedd8;
+    /* background-color: #ffedd8; */
     z-index: -1;
+}
+
+body {
+    background: linear-gradient(135deg, #eef6f8 0%, #e1f8f4 100%);
+    background-attachment: fixed;
 }
 
 .profile {
@@ -84,7 +90,7 @@ a {
 .profile img {
     width: 100%;
     aspect-ratio: 1;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
 .social-and-cv {
@@ -131,7 +137,7 @@ a {
     border: 2px solid #333;
     padding: 5px 10px;
     border-radius: 5px;
-    margin: 5px 0 5px 5px; /* margin-left added */
+    margin: 5px 0 5px 5px; 
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
@@ -214,18 +220,16 @@ a {
 .announcements::before,
 .section-title {
     display: inline-block;
-    background-color: #ccf1d6;
     font-weight: 800;
     font-size: 2rem;
     padding: 5px 12px;
     border-radius: 8px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     margin-bottom: 10px;
 }
 
 
 .update-title {
-    background-color: #ccf1d6;
     font-weight: 800;
     font-size: larger;
     padding: 7px 10px;
@@ -234,7 +238,6 @@ a {
 }
 
 .announcements .updates {
-    background-color: #ccf1d6;
     border-radius: 8px;
     max-height: 40vh;
     padding: 10px 20px;
@@ -267,7 +270,6 @@ a {
 .announcements .section-title {
     position: relative;
     left: 30px;
-    background-color: #ccf1d6;
     font-weight: 800;
     font-size: 2rem;
     padding: 7px 10px;
@@ -278,7 +280,6 @@ a {
 .education-experience .section-title {
     position: relative;
     left: 30px;
-    background-color: #d8eaff;
     font-weight: 800;
     font-size: 2rem;
     padding: 7px 10px;
@@ -289,7 +290,6 @@ a {
 .awards-honors .section-title {
     position: relative;
     left: 30px;
-    background-color: #f2f5d4;
     font-weight: 800;
     font-size: 2rem;
     padding: 7px 10px;
@@ -297,7 +297,6 @@ a {
     margin-bottom: 0;
 }
 .education-experience .updates {
-    background-color: #d8eaff;
     border-radius: 8px;
     max-height: 40vh;
     padding: 10px 20px;
@@ -306,7 +305,7 @@ a {
 }
 
 .awards-honors .updates {
-    background-color: #f2f5d4;
+    /* background-color: #f2f5d4; */
     border-radius: 8px;
     max-height: 40vh;
     padding: 10px 20px;
@@ -335,7 +334,7 @@ a {
 }
 
 .tab-toggle {
-    background-color: #fff;
+    background-color: #fafcfbd0;
     color: #333;
     font-weight: bold;
     border: 2px solid #333;
@@ -347,11 +346,11 @@ a {
 }
 
 .tab-toggle:hover {
-    background-color: #f3d9b1;
+    background-color: #bdf0e3ec;
 }
 
 .tab-toggle.active {
-    background-color: #ffedd8;
+    background-color: #bdf0e3ec;
     border-color: #333;
 }
 
@@ -372,8 +371,6 @@ a {
     max-height: 80vh;
     overflow-y: scroll;
     scrollbar-width: thin;
-    border-top: 15px solid #ffedd8;
-    border-bottom: 15px solid #ffedd8;
     border-radius: 10px;
 }
 
@@ -381,17 +378,17 @@ a {
     height: fit-content;
     padding: 20px;
     margin-bottom: 20px;
-    background-color: #ffedd8;
-    /* border-radius: 10px; */
+    border-radius: 10px;
     display: flex;
     justify-content: start;
     align-items: start;
 }
 
 .publication-item img {
-    max-width: 200px;
-    min-width: 200px;
-    border-radius: 10px;
+    max-width: 250px;
+    min-width: 250px;
+    border-radius: 1px;
+    /* border-color: #333; */
 }
 
 .publication-description {
@@ -405,7 +402,7 @@ a {
 }
 
 .publication-description .collaborators {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -428,10 +425,17 @@ a {
 
 .bibtex {
     padding: 15px;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 10px;
 }
 
+.site-footer {
+    text-align: center;
+    font-size: 1rem;
+    color: #222121;
+    margin-top: 20px;
+    padding: 10px 0;
+}
 
 @media only screen and (max-width: 600px) {
 
@@ -440,7 +444,6 @@ a {
         padding: 20px;
         margin-bottom: 20px;
         border-radius: 0px;
-        background-color: #ffedd8;
         flex-direction: column;
         align-items: center;
 
@@ -494,11 +497,11 @@ a {
 }
 
 .tab-button:hover {
-    background-color: #f5f5f5;
+    background-color: #fafcfbd0;
 }
 
 .tab-button.active {
-    background-color: #ffedd8;
+    background-color: #fafcfbd0;
     color: #000;
     text-decoration: none;
 }
@@ -514,7 +517,6 @@ a {
 .contact-card .section-title {
     position: relative;
     left: 30px;
-    background-color: #ffe5ec;
     font-weight: 800;
     font-size: 2rem;
     padding: 7px 10px;
@@ -523,7 +525,6 @@ a {
 }
 
 .contact-card .updates {
-    background-color: #ffe5ec;
     border-radius: 8px;
     max-height: fit-content;
     padding: 10px 20px;
@@ -539,7 +540,7 @@ a {
 .contact-social {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap; /* Force single line */
+    flex-wrap: nowrap; 
     align-items: center;
     gap: 15px;
     margin-top: 5px;
@@ -554,7 +555,7 @@ a {
     height: 30px;
 }
 
-/* Align email icon inline */
+
 .icon-inline {
     width: 20px;
     height: 20px;
@@ -562,7 +563,6 @@ a {
     margin-right: 8px;
 }
 
-/* Contact card background and border removal */
 .contact-card .section-title {
     background-color: transparent;
     padding-left: 0;
@@ -611,4 +611,19 @@ a {
 .contact-social img {
     width: 30px;
     height: 30px;
+}
+
+
+.frosted-glass {
+    background-color: #ffffffe8; /* semi-transparent white */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* for Safari */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.section {
+    margin: 20px 0; /* Adjust the spacing as needed */
 }
