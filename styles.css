@@ -550,16 +550,6 @@ a {
     margin-right: 8px;
 }
 
-/* Remove border from specific update item */
-.update-item.no-border {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-
-.contact-card .update-item.no-border .update-item-description {
-    margin-bottom: 20px;
-}
-
 /* Contact card background and border removal */
 .contact-card .section-title {
     background-color: transparent;
