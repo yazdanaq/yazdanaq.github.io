@@ -14,7 +14,7 @@ const publicationData = [
     {
         publication_link: 'https://doi.org/10.3390/s25154554',
         title: 'Intelligent Priority-Aware Spectrum Access in 5G Vehicular IoT: A Reinforcement Learning Approach',
-        image_url: './assets/images/adeel2025-2.png',
+        image_url: './assets/images/adeel2025-3.png',
         collaborators: [{
             name: 'Adeel Iqbal', link: 'https://scholar.google.com/citations?hl=en&user=4S4bE0MAAAAJ'},
             {name: 'Tahir Khurshaid', link: 'https://scholar.google.com/citations?user=LqWdHJUAAAAJ&hl=en'},
