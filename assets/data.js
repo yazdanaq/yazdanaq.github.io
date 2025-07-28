@@ -12,6 +12,19 @@ const updateData = [
 
 const publicationData = [
     {
+        publication_link: 'https://doi.org/10.3390/s25154554',
+        title: 'Intelligent Priority-Aware Spectrum Access in 5G Vehicular IoT: A Reinforcement Learning Approach',
+        image_url: './assets/images/adeel2025-2.png',
+        collaborators: [{
+            name: 'Adeel Iqbal', link: 'https://scholar.google.com/citations?hl=en&user=4S4bE0MAAAAJ'},
+            {name: 'Tahir Khurshaid', link: 'https://scholar.google.com/citations?user=LqWdHJUAAAAJ&hl=en'},
+            {name: 'Yazdan Ahmad Qadri', link: 'https://scholar.google.com/citations?user=h6CB6IQAAAAJ&hl=en'}
+        ],
+        citation: '@article{Adeel2025, author = {Iqbal, Adeel and Khurshaid, Tahir and Qadri, Yazdan Ahmad}, title = {Intelligent Priority-Aware Spectrum Access in 5G Vehicular IoT: A Reinforcement Learning Approach}, journal = {Sensors}, volume = {25}, number = {15}, year = {2025}, article-number = {4554}, url = {https://doi.org/10.3390/s25154554}, doi = {10.3390/s25154554}}',
+        // codeLink : 'https://github.com', 
+        // pdfLink : './pdf/'
+    },
+    {
         publication_link: 'https://doi.org/10.3390/s25113342',
         title: 'Priority-Aware Spectrum Management for QoS Optimization in Vehicular IoT',
         image_url: './assets/images/adeel2025-2.png',
