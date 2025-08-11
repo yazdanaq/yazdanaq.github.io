@@ -17,6 +17,58 @@ updateData.forEach(update => {
     announcementContainer.appendChild(updateItem);
 });
 
+// Research Interests (data-driven, scalable)
+const riGrid = document.getElementById("ri-grid");
+if (riGrid && typeof interestsData !== "undefined") {
+  interestsData.forEach(item => {
+    const card = document.createElement("div");
+    card.className = "ri-card";
+    card.setAttribute("tabindex", "0"); // keyboard focus
+    card.setAttribute("role", "button");
+    card.setAttribute("aria-expanded", "false");
+
+    const img = document.createElement("img");
+    img.src = item.image_url;
+    img.alt = item.alt || item.title || "Research interest image";
+
+    const caption = document.createElement("div");
+    caption.className = "ri-caption";
+    caption.textContent = item.title;
+
+    const desc = document.createElement("div");
+    desc.className = "ri-desc";
+    desc.textContent = item.description;
+
+    card.appendChild(img);
+    card.appendChild(caption);
+    card.appendChild(desc);
+    riGrid.appendChild(card);
+
+    // Mobile/touch: toggle expand on click/tap
+    const toggle = () => {
+      const isExpanded = card.classList.toggle("expand");
+      card.setAttribute("aria-expanded", isExpanded ? "true" : "false");
+    };
+
+    // Only click-toggle on touch or small screens so desktop hover stays natural
+    card.addEventListener("click", () => {
+      if (window.matchMedia("(hover: none)").matches || window.innerWidth < 768) {
+        toggle();
+      }
+    });
+
+    // Keyboard support (Enter/Space toggles)
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  });
+}
+
+
+
 
 const publicationHolder = document.getElementById("publication-holder")
 publicationData.forEach((publication) => {
