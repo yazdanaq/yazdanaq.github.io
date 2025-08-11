@@ -685,14 +685,14 @@ body {
 
 .ri-caption {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 2rem;
   padding: 10px 12px 6px 12px;
 }
 
 .ri-desc {
-  font-size: 0.98rem;
+  font-size: 1.5rem;
   color: #333;
-  line-height: 1.45;
+  line-height: 2;
   padding: 0 12px;          /* collapsed padding (no bottom) */
   max-height: 0;            /* hidden by default */
   overflow: hidden;
