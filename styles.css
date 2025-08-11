@@ -627,3 +627,93 @@ body {
 .section {
     margin: 20px 0; /* Adjust the spacing as needed */
 }
+
+
+/* Research Interests */
+.research-interests .section-title {
+  position: relative;
+  left: 30px;
+  font-weight: 800;
+  font-size: 2rem;
+  padding: 7px 10px;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 0;
+}
+
+.ri-grid {
+  display: grid;
+  gap: 16px;
+  padding: 10px 20px;
+  grid-template-columns: repeat(3, 1fr); /* max 3 on desktop */
+}
+
+/* Tablet: 2 per row */
+@media (max-width: 1024px) {
+  .ri-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 1 per row */
+@media (max-width: 600px) {
+  .ri-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ri-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ri-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+}
+
+.ri-card img {
+  width: 100%;
+  aspect-ratio: 3 / 2;     /* consistent tile size */
+  object-fit: cover;
+  display: block;
+}
+
+.ri-caption {
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 10px 12px 6px 12px;
+}
+
+.ri-desc {
+  font-size: 0.98rem;
+  color: #333;
+  line-height: 1.45;
+  padding: 0 12px;          /* collapsed padding (no bottom) */
+  max-height: 0;            /* hidden by default */
+  overflow: hidden;
+  transition: max-height 0.28s ease, padding 0.28s ease;
+}
+
+/* Expand on hover (desktop/mouse) */
+.ri-card:hover .ri-desc {
+  max-height: 240px;        /* adjust as needed */
+  padding: 8px 12px 12px 12px;
+}
+
+/* Expand when toggled (mobile/touch) */
+.ri-card.expand .ri-desc {
+  max-height: 240px;
+  padding: 8px 12px 12px 12px;
+}
+
+/* Keyboard focus accessibility */
+.ri-card:focus-visible {
+  outline: 3px solid #afe0fa;
+  outline-offset: 3px;
+  border-radius: 12px;
+}
