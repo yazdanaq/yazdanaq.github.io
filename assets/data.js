@@ -1,23 +1,21 @@
-
+// Research Interests data
 const interestsData = [
   {
     title: "Wi-Fi Sensing for Health",
-    image_url: "./assets/images/wifi.jpg",
+    image_url: "./assets/images/me.gif", // use a known image first to test
     alt: "Wi-Fi sensing illustration",
     description:
-      "Using channel state information (CSI) and Doppler features from commodity Wi-Fi for respiration, gait, and activity monitoring."
+      "Using CSI and Doppler features from commodity Wi-Fi for respiration, gait, and activity monitoring."
   },
   {
     title: "Low-Latency Edge AI",
-    image_url: "./assets/images/wifi.jpg",
+    image_url: "./assets/images/me.gif", // replace with your image later
     alt: "Edge AI concept",
     description:
-      "Deploying efficient deep models on edge devices for real-time medical signal processing, privacy, and resilience."
+      "Deploying efficient deep models on edge devices for real-time medical signal processing with privacy."
   }
-  // You can add a third (or more) later; the grid handles it.
+  // Add more later; grid keeps max 3 per row on desktop
 ];
-
-
 
 
 
