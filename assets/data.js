@@ -2,14 +2,14 @@
 const interestsData = [
   {
     title: "Wi-Fi Sensing for Health",
-    image_url: "./assets/images/me.gif", // use a known image first to test
+    image_url: "./assets/images/wifi.jpg", // use a known image first to test
     alt: "Wi-Fi sensing illustration",
     description:
       "Using CSI and Doppler features from commodity Wi-Fi for respiration, gait, and activity monitoring."
   },
   {
     title: "Low-Latency Edge AI",
-    image_url: "./assets/images/me.gif", // replace with your image later
+    image_url: "./assets/images/wifi.jpg", // replace with your image later
     alt: "Edge AI concept",
     description:
       "Deploying efficient deep models on edge devices for real-time medical signal processing with privacy."
