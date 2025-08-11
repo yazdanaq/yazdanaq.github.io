@@ -1,25 +1,25 @@
 // Research Interests data
 const interestsData = [
   {
-    title: "Wi-Fi for Healthcare",
-    image_url: "./assets/images/wifi.jpg", // use a known image first to test
-    alt: "Wi-Fi sensing illustration",
-    description:
-      "Using CSI and Doppler features from commodity Wi-Fi for respiration, gait, and activity monitoring."
+      title: "Wi-Fi for Healthcare",
+      image_url: "./assets/images/wifi.jpg", // use a known image first to test
+      alt: "Wi-Fi in Healthare",
+      description:
+        "Enable ultra-low latency and ultra reliable communication over Wi-Fi. Low latency channel access using distributed coordination function (DCF) and uplink  "
   },
   {
-    title: "Low-Latency Edge AI",
-    image_url: "./assets/images/wifi.jpg", // replace with your image later
-    alt: "Edge AI concept",
-    description:
-      "Deploying efficient deep models on edge devices for real-time medical signal processing with privacy."
-  }
+      title: "Low-Latency Edge AI",
+      image_url: "./assets/images/wifi.jpg", // replace with your image later
+      alt: "Edge AI concept",
+      description:
+        "Deploying efficient deep models on edge devices for real-time medical signal processing with privacy."
+  },
   {
-    title: "Wi-Fi for Healthcare",
-    image_url: "./assets/images/wifi.jpg", // use a known image first to test
-    alt: "Wi-Fi sensing illustration",
-    description:
-      "Using CSI and Doppler features from commodity Wi-Fi for respiration, gait, and activity monitoring."
+      title: "Wi-Fi for Healthcare",
+      image_url: "./assets/images/wifi.jpg", // use a known image first to test
+      alt: "Wi-Fi sensing illustration",
+      description:
+        "Using CSI and Doppler features from commodity Wi-Fi for respiration, gait, and activity monitoring."
   },
 ];
 
