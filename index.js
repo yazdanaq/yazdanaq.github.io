@@ -1,71 +1,112 @@
-const announcementContainer = document.getElementById("announcement-board");
-updateData.forEach(update => {
-    const updateItem = document.createElement("div");
-    updateItem.classList.add("update-item");
-
-    const updateDate = document.createElement("div");
-    updateDate.classList.add("update-item-date");
-    updateDate.textContent = update.date;
-
-    const updateDescription = document.createElement("div");
-    updateDescription.classList.add("update-item-description");
-    updateDescription.textContent = update.description;
-
-    updateItem.appendChild(updateDate);
-    updateItem.appendChild(updateDescription);
-
-    announcementContainer.appendChild(updateItem);
-});
-
-// Research Interests (data-driven, scalable)
+// ===== Research Interests (rowed, 90/10 expand) =====
 const riGrid = document.getElementById("ri-grid");
-if (riGrid && typeof interestsData !== "undefined") {
-  interestsData.forEach(item => {
-    const card = document.createElement("div");
-    card.className = "ri-card";
-    card.setAttribute("tabindex", "0"); // keyboard focus
-    card.setAttribute("role", "button");
-    card.setAttribute("aria-expanded", "false");
 
-    const img = document.createElement("img");
-    img.src = item.image_url;
-    img.alt = item.alt || item.title || "Research interest image";
+function chunk(arr, size) {
+  const out = [];
+  for (let i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size));
+  return out;
+}
 
-    const caption = document.createElement("div");
-    caption.className = "ri-caption";
-    caption.textContent = item.title;
-
-    const desc = document.createElement("div");
-    desc.className = "ri-desc";
-    desc.textContent = item.description;
-
-    card.appendChild(img);
-    card.appendChild(caption);
-    card.appendChild(desc);
-    riGrid.appendChild(card);
-
-    // Mobile/touch: toggle expand on click/tap
-    const toggle = () => {
-      const isExpanded = card.classList.toggle("expand");
-      card.setAttribute("aria-expanded", isExpanded ? "true" : "false");
-    };
-
-    // Only click-toggle on touch or small screens so desktop hover stays natural
-    card.addEventListener("click", () => {
-      if (window.matchMedia("(hover: none)").matches || window.innerWidth < 768) {
-        toggle();
-      }
-    });
-
-    // Keyboard support (Enter/Space toggles)
-    card.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        toggle();
-      }
+function collapseAllRows() {
+  document.querySelectorAll(".ri-row.has-expanded").forEach(row => {
+    row.classList.remove("has-expanded");
+    row.querySelectorAll(".ri-card").forEach(c => {
+      c.classList.remove("is-expanded", "stack-top", "stack-bottom");
+      c.setAttribute("aria-expanded", "false");
     });
   });
 }
+
+if (riGrid && typeof interestsData !== "undefined") {
+  const rows = chunk(interestsData, 3);
+  rows.forEach((rowData) => {
+    const rowEl = document.createElement("div");
+    rowEl.className = "ri-row";
+
+    // Build cards
+    const cards = rowData.map((item, idx) => {
+      const card = document.createElement("div");
+      card.className = "ri-card";
+      card.setAttribute("tabindex", "0");
+      card.setAttribute("role", "button");
+      card.setAttribute("aria-expanded", "false");
+
+      const img = document.createElement("img");
+      img.src = item.image_url;
+      img.alt = item.alt || item.title || "Research interest image";
+
+      const caption = document.createElement("div");
+      caption.className = "ri-caption";
+      caption.textContent = item.title;
+
+      // Frosted overlay panel with title + description
+      const panel = document.createElement("div");
+      panel.className = "ri-desc-panel";
+
+      const title = document.createElement("div");
+      title.style.fontWeight = "800";
+      title.style.fontSize = "1.05rem";
+      title.style.marginBottom = "6px";
+      title.textContent = item.title;
+
+      const desc = document.createElement("div");
+      desc.style.fontSize = "0.98rem";
+      desc.style.lineHeight = "1.5";
+      desc.textContent = item.description;
+
+      panel.appendChild(title);
+      panel.appendChild(desc);
+
+      card.appendChild(img);
+      card.appendChild(caption);
+      card.appendChild(panel);
+
+      // Click / keyboard: expand this card in the row
+      const expandThis = (e) => {
+        e.stopPropagation();
+
+        // Already expanded? collapse the row
+        if (card.classList.contains("is-expanded")) {
+          collapseAllRows();
+          return;
+        }
+
+        // Collapse everything globally
+        collapseAllRows();
+
+        // Expand current row & arrange siblings
+        rowEl.classList.add("has-expanded");
+        card.classList.add("is-expanded");
+        card.setAttribute("aria-expanded", "true");
+
+        // Mark the other two in this row as stacked (top/bottom)
+        const siblings = Array.from(rowEl.querySelectorAll(".ri-card")).filter(c => c !== card);
+        if (siblings.length >= 1) siblings[0].classList.add("stack-top");
+        if (siblings.length >= 2) siblings[1].classList.add("stack-bottom");
+      };
+
+      card.addEventListener("click", expandThis);
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          expandThis(e);
+        }
+      });
+
+      return card;
+    });
+
+    // Append cards to the row
+    cards.forEach(c => rowEl.appendChild(c));
+    riGrid.appendChild(rowEl);
+  });
+
+  // Click outside to collapse
+  document.addEventListener("click", () => collapseAllRows());
+  // Prevent row clicks from bubbling to document when switching cards quickly
+  riGrid.addEventListener("click", (e) => e.stopPropagation());
+}
+
 
 
 
