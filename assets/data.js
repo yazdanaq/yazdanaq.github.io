@@ -5,21 +5,21 @@ const interestsData = [
       image_url: "./assets/images/wifi.jpg", // use a known image first to test
       alt: "Wi-Fi in Healthare",
       description:
-        "Enable ultra-low latency and ultra reliable communication over Wi-Fi. Low latency channel access using distributed coordination function (DCF) and uplink  "
+        "Enable ultra-low latency and ultra reliable communication over Wi-Fi. Intelligent ultra low-latency channel access using distributed coordination function (DCF) and uplink orthogonal frequency division multiple access random access (UORA). Multi-link operation and multi access point coordination for adapting Wi-Fi for healthcare applications"
   },
   {
-      title: "Low-Latency Edge AI",
+      title: "Wireless Sensing",
       image_url: "./assets/images/wifi.jpg", // replace with your image later
-      alt: "Edge AI concept",
+      alt: "Wireless Sensing",
       description:
-        "Deploying efficient deep models on edge devices for real-time medical signal processing with privacy."
+        "Using electromagnetic radiation for pose estimation, gait analysis, and vital health & activity monitoring. Leveraging advanced artificial intelligence models to extract knowledge from Wi-Fi CSI and Doppler features. Integrating Large Language Models and Generative models to monitor activity and analyze motion. Wi-Fi based sensing and health monitoring."
   },
   {
-      title: "Wi-Fi for Healthcare",
+      title: "AI for Healthcare",
       image_url: "./assets/images/wifi.jpg", // use a known image first to test
       alt: "Wi-Fi sensing illustration",
       description:
-        "Using CSI and Doppler features from commodity Wi-Fi for respiration, gait, and activity monitoring."
+        "Developing AI models for bio signal and image processing. Transformer-based models for time-series analysis. Designing Large Language Models for drug discovery. Improve interpretability and explianability of models to develop trustworthy AI for healthcare."
   },
 ];
 
