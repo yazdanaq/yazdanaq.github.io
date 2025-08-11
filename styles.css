@@ -859,7 +859,7 @@ body {
 
 /* 90/10 expanded state stays the same */
 .ri-row.has-expanded {
-  grid-template-columns: 9fr 1fr;   /* 90% / 10% */
+  grid-template-columns: 8fr 1fr;   /* 90% / 10% */
   grid-template-rows: 1fr 1fr;      /* stack small tiles */
 }
 
