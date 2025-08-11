@@ -1,10 +1,25 @@
-// ===== Research Interests (rowed, 90/10 expand, with close button) =====
+// ===== Research Interests (rowed, 90/10 expand, with close button & fixed height) =====
 const riGrid = document.getElementById("ri-grid");
+const riSection = document.querySelector(".research-interests"); // <— section element
 
 function chunk(arr, size) {
   const out = [];
   for (let i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size));
   return out;
+}
+
+function setDefaultSectionHeight() {
+  if (!riSection) return;
+  // Temporarily clear fixed mode to measure natural height
+  riSection.classList.remove("fixed-height");
+  riSection.style.removeProperty("--ri-default-height");
+
+  // Measure after layout flush
+  requestAnimationFrame(() => {
+    const h = riSection.scrollHeight;           // natural height in collapsed state
+    riSection.style.setProperty("--ri-default-height", `${h}px`);
+    riSection.classList.add("fixed-height");    // lock it
+  });
 }
 
 function collapseAllRows() {
@@ -15,6 +30,8 @@ function collapseAllRows() {
       c.setAttribute("aria-expanded", "false");
     });
   });
+  // After collapsing, restore fixed height (default view)
+  setDefaultSectionHeight();
 }
 
 if (riGrid && typeof interestsData !== "undefined") {
@@ -39,11 +56,9 @@ if (riGrid && typeof interestsData !== "undefined") {
       caption.className = "ri-caption";
       caption.textContent = item.title;
 
-      // Frosted overlay panel
       const panel = document.createElement("div");
       panel.className = "ri-desc-panel";
 
-      // Close button (X)
       const closeBtn = document.createElement("button");
       closeBtn.className = "ri-close";
       closeBtn.setAttribute("type", "button");
@@ -72,13 +87,16 @@ if (riGrid && typeof interestsData !== "undefined") {
       const expandThis = (e) => {
         e.stopPropagation();
 
-        // If already expanded, collapse
+        // If already expanded, collapse everything back to default height
         if (card.classList.contains("is-expanded")) {
           collapseAllRows();
           return;
         }
 
-        // Collapse everything first
+        // We’re going to expand: release fixed height so section can grow
+        if (riSection) riSection.classList.remove("fixed-height");
+
+        // Collapse other rows/cards first
         collapseAllRows();
 
         // Expand current row & arrange siblings
@@ -86,13 +104,11 @@ if (riGrid && typeof interestsData !== "undefined") {
         card.classList.add("is-expanded");
         card.setAttribute("aria-expanded", "true");
 
-        // Stack the other two in this row
         const siblings = Array.from(rowEl.querySelectorAll(".ri-card")).filter(c => c !== card);
         if (siblings.length >= 1) siblings[0].classList.add("stack-top");
         if (siblings.length >= 2) siblings[1].classList.add("stack-bottom");
       };
 
-      // Card click/keyboard expand
       card.addEventListener("click", expandThis);
       card.addEventListener("keydown", (e) => {
         if (e.key === "Enter" || e.key === " ") {
@@ -101,7 +117,6 @@ if (riGrid && typeof interestsData !== "undefined") {
         }
       });
 
-      // Close button handler (don’t bubble)
       closeBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         collapseAllRows();
@@ -116,14 +131,23 @@ if (riGrid && typeof interestsData !== "undefined") {
 
   // Click outside to collapse
   document.addEventListener("click", () => collapseAllRows());
-  // Prevent grid clicks from bubbling up (so quick card switching feels natural)
   riGrid.addEventListener("click", (e) => e.stopPropagation());
 
   // ESC to close
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") collapseAllRows();
   });
+
+  // Initial measurement after first render (collapsed state)
+  requestAnimationFrame(setDefaultSectionHeight);
+
+  // Recalculate default height on resize if nothing is expanded
+  window.addEventListener("resize", () => {
+    const anyExpanded = document.querySelector(".ri-card.is-expanded");
+    if (!anyExpanded) setDefaultSectionHeight();
+  });
 }
+
 
 
 // News
