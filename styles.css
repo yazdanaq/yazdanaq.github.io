@@ -921,7 +921,7 @@ body {
 /* Expanded state shows the panel */
 .ri-card.is-expanded .ri-desc-panel { display: block; }
 
-/* Stacked siblings in the 10% column (keep as-is) */
+/* Stacked siblings in the 40% column (keep as-is) */
 .ri-card.stack-top   { grid-column: 2 / 3; grid-row: 1 / 2; }
 .ri-card.stack-bottom{ grid-column: 2 / 3; grid-row: 2 / 3; }
 .ri-card.is-expanded { grid-column: 1 / 2; grid-row: 1 / 3; }
@@ -972,7 +972,7 @@ body {
 
 /* Expanded state: true 90/10 split + vertical stacking of the narrow column */
 .research-interests .ri-row.has-expanded {
-  grid-template-columns: 9fr 1fr; /* 90% / 10% */
+  grid-template-columns: 5fr 4fr; /* 50% / 40% */
   grid-template-rows: 1fr 1fr;    /* stack two small tiles */
 }
 
@@ -1092,7 +1092,7 @@ body {
   grid-template-rows: 1fr 1fr;    /* stack two small tiles */
 }
 
-/* Expanded card spans the 90% area; siblings stack in the 10% column */
+/* Expanded card spans the 50% area; siblings stack in the 40% column */
 .research-interests .ri-card.is-expanded { grid-column: 1 / 2; grid-row: 1 / 3; }
 .research-interests .ri-card.stack-top   { grid-column: 2 / 3; grid-row: 1 / 2; }
 .research-interests .ri-card.stack-bottom{ grid-column: 2 / 3; grid-row: 2 / 3; }
