@@ -1,7 +1,7 @@
 // Research Interests data
 const interestsData = [
   {
-    title: "Wi-Fi Sensing for Health",
+    title: "Wi-Fi for Healthcare",
     image_url: "./assets/images/wifi.jpg", // use a known image first to test
     alt: "Wi-Fi sensing illustration",
     description:
@@ -14,7 +14,13 @@ const interestsData = [
     description:
       "Deploying efficient deep models on edge devices for real-time medical signal processing with privacy."
   }
-  // Add more later; grid keeps max 3 per row on desktop
+  {
+    title: "Wi-Fi for Healthcare",
+    image_url: "./assets/images/wifi.jpg", // use a known image first to test
+    alt: "Wi-Fi sensing illustration",
+    description:
+      "Using CSI and Doppler features from commodity Wi-Fi for respiration, gait, and activity monitoring."
+  },
 ];
 
 
