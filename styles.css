@@ -1170,3 +1170,14 @@ body {
   .research-interests .ri-row { grid-template-columns: 1fr; }
   .research-interests .ri-row.has-expanded { grid-template-columns: 1fr; grid-template-rows: auto; }
 }
+
+/* --- Research Interests: fixed height in collapsed state --- */
+.research-interests {
+  transition: height 0.25s ease;
+}
+
+/* When no card is expanded, keep the section at its default measured height */
+.research-interests.fixed-height {
+  height: var(--ri-default-height, auto);
+  overflow: hidden; /* avoid tiny layout jitter from row gaps */
+}
