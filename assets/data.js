@@ -18,7 +18,7 @@ const interestsData = [
 ];
 
 
-
+//News
 const updateData = [
     { date: "2025-Feb-01", description: "0299-Special Topics on Machine Learning is now open for Spring 2025" },
     { date: "2024-Aug-01", description: "0308-Artificial Intelligence Applications is now open for Fall 2024" },
@@ -26,8 +26,6 @@ const updateData = [
     { date: "2023-Mar-01", description: "Joined the Department of Electronic Engineering, Kyunghee University as a Postdoctoral Research Associate" },
     { date: "2023-02-22", description: "Received my PhD at the Department of Information and Communication Engineering, Yeungnam University"}
 ];
-
-
 
 
 //Papers
