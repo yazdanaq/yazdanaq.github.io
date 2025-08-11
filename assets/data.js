@@ -1,3 +1,26 @@
+
+const interestsData = [
+  {
+    title: "Wi-Fi Sensing for Health",
+    image_url: "./assets/images/wifi.jpg",
+    alt: "Wi-Fi sensing illustration",
+    description:
+      "Using channel state information (CSI) and Doppler features from commodity Wi-Fi for respiration, gait, and activity monitoring."
+  },
+  {
+    title: "Low-Latency Edge AI",
+    image_url: "./assets/images/wifi.jpg",
+    alt: "Edge AI concept",
+    description:
+      "Deploying efficient deep models on edge devices for real-time medical signal processing, privacy, and resilience."
+  }
+  // You can add a third (or more) later; the grid handles it.
+];
+
+
+
+
+
 const updateData = [
     { date: "2025-Feb-01", description: "0299-Special Topics on Machine Learning is now open for Spring 2025" },
     { date: "2024-Aug-01", description: "0308-Artificial Intelligence Applications is now open for Fall 2024" },
@@ -7,9 +30,9 @@ const updateData = [
 ];
 
 
+
+
 //Papers
-
-
 const publicationData = [
     {
         publication_link: 'https://doi.org/10.3390/s25154554',
