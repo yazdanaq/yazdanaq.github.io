@@ -811,7 +811,7 @@ body {
   border-radius: 10px;
   padding: 6px 10px;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 /* Make the stacked (10%) tiles visually smaller without breaking layout */
