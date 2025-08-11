@@ -126,6 +126,7 @@ if (riGrid && typeof interestsData !== "undefined") {
 }
 
 
+// News
 
 const announcementContainer = document.getElementById("announcement-board");
 updateData.forEach(update => {
