@@ -71,14 +71,34 @@ if (riGrid && typeof interestsData !== "undefined") {
       title.style.marginBottom = "6px";
       title.textContent = item.title;
 
-      const desc = document.createElement("div");
-      desc.style.fontSize = "0.98rem";
-      desc.style.lineHeight = "1.5";
-      desc.textContent = item.description;
+    const descList = document.createElement("ul");
+    descList.style.fontSize = "0.98rem";
+    descList.style.lineHeight = "1.5";
+    descList.style.textAlign = "justify";
+
+    // If your data is already an array of bullet points:
+    if (Array.isArray(item.description)) {
+    item.description.forEach(point => {
+        const li = document.createElement("li");
+        li.textContent = point;
+        descList.appendChild(li);
+    });
+    } else {
+    // If description is a single string, split by period or newline into bullets
+    item.description.split(/[\n•]/).forEach(point => {
+        const trimmed = point.trim();
+        if (trimmed) {
+        const li = document.createElement("li");
+        li.textContent = trimmed;
+        descList.appendChild(li);
+        }
+    });
+    }
+
 
       panel.appendChild(closeBtn);
       panel.appendChild(title);
-      panel.appendChild(desc);
+      panel.appendChild(descList);
 
       card.appendChild(img);
       card.appendChild(caption);
