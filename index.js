@@ -1,4 +1,4 @@
-// ===== Research Interests (rowed, 90/10 expand) =====
+// ===== Research Interests (rowed, 90/10 expand, with close button) =====
 const riGrid = document.getElementById("ri-grid");
 
 function chunk(arr, size) {
@@ -19,12 +19,12 @@ function collapseAllRows() {
 
 if (riGrid && typeof interestsData !== "undefined") {
   const rows = chunk(interestsData, 3);
+
   rows.forEach((rowData) => {
     const rowEl = document.createElement("div");
     rowEl.className = "ri-row";
 
-    // Build cards
-    const cards = rowData.map((item, idx) => {
+    const cards = rowData.map((item) => {
       const card = document.createElement("div");
       card.className = "ri-card";
       card.setAttribute("tabindex", "0");
@@ -39,9 +39,16 @@ if (riGrid && typeof interestsData !== "undefined") {
       caption.className = "ri-caption";
       caption.textContent = item.title;
 
-      // Frosted overlay panel with title + description
+      // Frosted overlay panel
       const panel = document.createElement("div");
       panel.className = "ri-desc-panel";
+
+      // Close button (X)
+      const closeBtn = document.createElement("button");
+      closeBtn.className = "ri-close";
+      closeBtn.setAttribute("type", "button");
+      closeBtn.setAttribute("aria-label", "Close");
+      closeBtn.textContent = "×";
 
       const title = document.createElement("div");
       title.style.fontWeight = "800";
@@ -54,6 +61,7 @@ if (riGrid && typeof interestsData !== "undefined") {
       desc.style.lineHeight = "1.5";
       desc.textContent = item.description;
 
+      panel.appendChild(closeBtn);
       panel.appendChild(title);
       panel.appendChild(desc);
 
@@ -61,17 +69,16 @@ if (riGrid && typeof interestsData !== "undefined") {
       card.appendChild(caption);
       card.appendChild(panel);
 
-      // Click / keyboard: expand this card in the row
       const expandThis = (e) => {
         e.stopPropagation();
 
-        // Already expanded? collapse the row
+        // If already expanded, collapse
         if (card.classList.contains("is-expanded")) {
           collapseAllRows();
           return;
         }
 
-        // Collapse everything globally
+        // Collapse everything first
         collapseAllRows();
 
         // Expand current row & arrange siblings
@@ -79,12 +86,13 @@ if (riGrid && typeof interestsData !== "undefined") {
         card.classList.add("is-expanded");
         card.setAttribute("aria-expanded", "true");
 
-        // Mark the other two in this row as stacked (top/bottom)
+        // Stack the other two in this row
         const siblings = Array.from(rowEl.querySelectorAll(".ri-card")).filter(c => c !== card);
         if (siblings.length >= 1) siblings[0].classList.add("stack-top");
         if (siblings.length >= 2) siblings[1].classList.add("stack-bottom");
       };
 
+      // Card click/keyboard expand
       card.addEventListener("click", expandThis);
       card.addEventListener("keydown", (e) => {
         if (e.key === "Enter" || e.key === " ") {
@@ -93,22 +101,50 @@ if (riGrid && typeof interestsData !== "undefined") {
         }
       });
 
+      // Close button handler (don’t bubble)
+      closeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        collapseAllRows();
+      });
+
       return card;
     });
 
-    // Append cards to the row
     cards.forEach(c => rowEl.appendChild(c));
     riGrid.appendChild(rowEl);
   });
 
   // Click outside to collapse
   document.addEventListener("click", () => collapseAllRows());
-  // Prevent row clicks from bubbling to document when switching cards quickly
+  // Prevent grid clicks from bubbling up (so quick card switching feels natural)
   riGrid.addEventListener("click", (e) => e.stopPropagation());
+
+  // ESC to close
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") collapseAllRows();
+  });
 }
 
 
 
+const announcementContainer = document.getElementById("announcement-board");
+updateData.forEach(update => {
+    const updateItem = document.createElement("div");
+    updateItem.classList.add("update-item");
+
+    const updateDate = document.createElement("div");
+    updateDate.classList.add("update-item-date");
+    updateDate.textContent = update.date;
+
+    const updateDescription = document.createElement("div");
+    updateDescription.classList.add("update-item-description");
+    updateDescription.textContent = update.description;
+
+    updateItem.appendChild(updateDate);
+    updateItem.appendChild(updateDescription);
+
+    announcementContainer.appendChild(updateItem);
+});
 
 
 const publicationHolder = document.getElementById("publication-holder")
