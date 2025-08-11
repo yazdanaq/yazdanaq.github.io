@@ -1181,3 +1181,17 @@ body {
   height: var(--ri-default-height, auto);
   overflow: hidden; /* avoid tiny layout jitter from row gaps */
 }
+
+
+/* Research Interests: description styling */
+.research-interests .ri-desc-panel ul {
+  margin: 0;
+  padding-left: 20px; /* indent for bullets */
+  list-style-type: disc;
+  text-align: justify;
+}
+
+.research-interests .ri-desc-panel li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
