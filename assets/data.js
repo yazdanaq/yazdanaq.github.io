@@ -4,22 +4,33 @@ const interestsData = [
       title: "Wi-Fi for Healthcare",
       image_url: "./assets/images/wifi.jpg", // use a known image first to test
       alt: "Wi-Fi in Healthare",
-      description:
-        "Enable ultra-low latency and ultra reliable communication over Wi-Fi. Intelligent ultra low-latency channel access using distributed coordination function (DCF) and uplink orthogonal frequency division multiple access random access (UORA). Leverage Multi-link Operation (MLO), spatial reuse and multi access point coordination to adapting the Wi-Fi for healthcare applications"
+      description: [
+        "Enable ultra-low latency and ultra reliable communication over Wi-Fi.", 
+        "Intelligent ultra low-latency channel access using distributed coordination function (DCF) and uplink orthogonal frequency division multiple access random access (UORA).", 
+        "Leverage Multi-link Operation (MLO), spatial reuse and multi access point coordination to adapting the Wi-Fi for healthcare applications."
+
+      ]
   },
   {
       title: "Wireless Sensing",
       image_url: "./assets/images/sensing.png", // replace with your image later
       alt: "Wireless Sensing",
-      description:
-        "Using electromagnetic radiation for pose estimation, gait analysis, and vital health & activity monitoring. Leveraging advanced artificial intelligence models to extract knowledge from Wi-Fi CSI and Doppler features. Integrating Large Language Models and Generative models to monitor activity and analyze motion. Wi-Fi based sensing and health monitoring."
+      description:  [
+        "Using electromagnetic radiation for pose estimation, gait analysis, and vital health & activity monitoring.",
+        "Leveraging advanced artificial intelligence models to extract knowledge from Wi-Fi CSI and Doppler features.",
+        "Integrating Large Language Models and Generative models to monitor activity and analyze motion. Wi-Fi based sensing and health monitoring."
+  ]
   },
   {
       title: "AI for Healthcare",
       image_url: "./assets/images/ai.jpg", // use a known image first to test
       alt: "Wi-Fi sensing illustration",
-      description:
-        "Developing AI models for bio signal and image processing. Transformer-based models for time-series analysis. Designing Large Language Models for drug discovery. Improve interpretability and explianability of models to develop trustworthy AI for healthcare."
+      description: [
+        "Developing AI models for bio signal and image processing.",
+        "Transformer-based models for time-series analysis.",
+        "Designing Large Language Models for drug discovery.", 
+        "Improve interpretability and explianability of models to develop trustworthy AI for healthcare."
+    ]
   },
 ];
 
