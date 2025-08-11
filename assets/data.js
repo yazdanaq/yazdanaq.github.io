@@ -5,7 +5,7 @@ const interestsData = [
       image_url: "./assets/images/wifi.jpg", // use a known image first to test
       alt: "Wi-Fi in Healthare",
       description:
-        "Enable ultra-low latency and ultra reliable communication over Wi-Fi. Intelligent ultra low-latency channel access using distributed coordination function (DCF) and uplink orthogonal frequency division multiple access random access (UORA). Multi-link operation and multi access point coordination for adapting Wi-Fi for healthcare applications"
+        "Enable ultra-low latency and ultra reliable communication over Wi-Fi. Intelligent ultra low-latency channel access using distributed coordination function (DCF) and uplink orthogonal frequency division multiple access random access (UORA). Leverage Multi-link Operation (MLO), spatial reuse and multi access point coordination to adapting the Wi-Fi for healthcare applications"
   },
   {
       title: "Wireless Sensing",
