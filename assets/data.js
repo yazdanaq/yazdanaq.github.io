@@ -37,7 +37,7 @@ const interestsData = [
 
 //News
 const updateData = [
-    { date: "2025-Sep-08", description: "Joined the Department of Electrical Engineering and Computer Science (EECS) at the Daegu Gyeongbuk Institute of Science & Technology (DGIST), Daegu, Republic of Korea " },
+    { date: "2025-Sep-08", description: "Joined the Department of Electrical Engineering and Computer Science (EECS) at the Daegu Gyeongbuk Institute of Science & Technology (DGIST), Daegu, Republic of Korea as a Postdoctoral Researcher" },
     { date: "2025-Feb-01", description: "0299-Special Topics on Machine Learning is now open for Spring 2025 " },
     { date: "2024-Aug-01", description: "0308-Artificial Intelligence Applications is now open for Fall 2024 " },
     { date: "2024-Mar-01", description: "Joined the School of Computer Science and Engineering, Yeungnam University as an International Research (Assistant) Professor " },
