@@ -37,16 +37,34 @@ const interestsData = [
 
 //News
 const updateData = [
-    { date: "2025-Feb-01", description: "0299-Special Topics on Machine Learning is now open for Spring 2025" },
-    { date: "2024-Aug-01", description: "0308-Artificial Intelligence Applications is now open for Fall 2024" },
+    { date: "2025-Sep-08", description: "Joined the Department of Electrical Engineering and Computer Science (EECS) at the Daegu Gyeongbuk Institute of Science & Technology (DGIST), Daegu, Republic of Korea " },
+    { date: "2025-Feb-01", description: "0299-Special Topics on Machine Learning is now open for Spring 2025 " },
+    { date: "2024-Aug-01", description: "0308-Artificial Intelligence Applications is now open for Fall 2024 " },
     { date: "2024-Mar-01", description: "Joined the School of Computer Science and Engineering, Yeungnam University as an International Research (Assistant) Professor " },
-    { date: "2023-Mar-01", description: "Joined the Department of Electronic Engineering, Kyunghee University as a Postdoctoral Research Associate" },
-    { date: "2023-02-22", description: "Received my PhD at the Department of Information and Communication Engineering, Yeungnam University"}
+    { date: "2023-Mar-01", description: "Joined the Department of Electronic Engineering, Kyunghee University, Republic of Korea as a Postdoctoral Research Associate " },
+    { date: "2023-Feb-22", description: "Received my PhD at the Department of Information and Communication Engineering, Yeungnam University, Republic of Korea "}
 ];
 
 
 //Papers
 const publicationData = [
+      {
+        publication_link: ' https://doi.org/10.3390/pharmaceutics17091119',
+        title: 'Explainable Artificial Intelligence: A Perspective on Drug Discovery',
+        image_url: './assets/images/XAI-DD.png',
+        collaborators: [{
+            name: 'Yazdan Ahmad Qadri', link: 'https://scholar.google.com/citations?user=h6CB6IQAAAAJ&hl=en'},
+            {name: 'Sibghatulla Sheikh', link: 'https://scholar.google.com/citations?user=gLYg1k0AAAAJ&hl=en'},
+            {name: 'Khurshid Ahmad', link: 'https://scholar.google.com/citations?user=JuKRQzgAAAAJ&hl=en&oi=ao'},
+            {name: 'Inho Choi', link: 'https://scholar.google.com/citations?user=ANsR5gUAAAAJ&hl=en'},
+            {name: 'Sung Won Kim', link: 'https://scholar.google.com/citations?user=qHnnxqIAAAAJ&hl=en'},
+            {name: 'Athanasios V. Vasilakos', link: 'https://scholar.google.com/scholar?q=Athanasios+V.+Vasilakos'}
+        ],
+        citation: '@Article{pharmaceutics17091119, AUTHOR = {Qadri, Yazdan Ahmad and Shaikh, Sibhghatulla and Ahmad, Khurshid and Choi, Inho and Kim, Sung Won and Vasilakos, Athansios V.}, TITLE = {Explainable Artificial Intelligence: A Perspective on Drug Discovery}, JOURNAL = {Pharmaceutics}, VOLUME = {17}, YEAR = {2025}, NUMBER = {9}, ARTICLE-NUMBER = {1119}, URL = {https://www.mdpi.com/1999-4923/17/9/1119}, DOI = {10.3390/pharmaceutics17091119}}',
+        // codeLink : 'https://github.com', 
+        // pdfLink : './pdf/'
+    },
+
     {
         publication_link: 'https://doi.org/10.3390/s25154554',
         title: 'Intelligent Priority-Aware Spectrum Access in 5G Vehicular IoT: A Reinforcement Learning Approach',
