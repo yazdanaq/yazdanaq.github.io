@@ -52,14 +52,14 @@ const publicationData = [
         publication_link: ' https://ieeexplore.ieee.org/abstract/document/11745872',
         title: 'Cross-Domain Heart Rate Estimation from Active mmWave to Passive Wi-Fi Radar',
         image_url: './assets/images/parkyazdan2026.png',
-        collaborators: [{
+        collaborators: [
            {name: 'Do-Hyun Park', link: 'https://science.jpl.nasa.gov/people/dohyun-park/'}, 
            {name: 'Yazdan Ahmad Qadri', link: 'https://scholar.google.com/citations?user=h6CB6IQAAAAJ&hl=en'}, 
             {name: 'Bum-Joon Kim', link: 'https://dgist-irslab.github.io/#members'},
             {name: 'Yun-Jung Jeong', link: 'https://dgist-irslab.github.io/#members'},
             {name: 'Jae-Ho Choi', link: 'https://scholar.google.com/citations?user=ywDewK4AAAAJ&hl=en'}
         ],
-        citation: '@Article{ieeeiotj, AUTHOR = {Park, Do-Hyun and Qadri, Yazdan Ahmad and Kim, Bum-Joon and Jeong, Yun-Jung and Choi, Jae-Ho}, TITLE = {Cross-Domain Heart Rate Estimation from Active mmWave to Passive Wi-Fi Radar}, JOURNAL = {IEEE Internet of Things}, VOLUME = {}, YEAR = {2026}, NUMBER = {}, ARTICLE-NUMBER = {}, URL = {https://ieeexplore.ieee.org/abstract/document/11745872}, DOI = {10.1109/JIOT.2026.3746089}}',
+        citation: '@Article{iotj_park, AUTHOR = {Park, Do-Hyun and Qadri, Yazdan Ahmad and Kim, Bum-Joon and Jeong, Yun-Jung and Choi, Jae-Ho}, TITLE = {Cross-Domain Heart Rate Estimation from Active mmWave to Passive Wi-Fi Radar}, JOURNAL = {IEEE Internet of Things}, VOLUME = {}, YEAR = {2026}, NUMBER = {}, ARTICLE-NUMBER = {}, URL = {https://ieeexplore.ieee.org/abstract/document/11745872}, DOI = {10.1109/JIOT.2026.3746089}}',
         // codeLink : 'https://github.com', 
         // pdfLink : './pdf/'
     },    
